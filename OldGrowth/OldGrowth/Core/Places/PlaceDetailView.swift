@@ -21,7 +21,7 @@ struct PlaceDetailView: View {
     var body: some View {
         ScrollView {
             MapBasisView(anchor: place.locationAnchor)
-                .frame(height: 300)
+                .frame(height: 300).ignoresSafeArea(edges: .top)
             
             CircleImageView(img: place.img)
                 .offset(y: -130).padding(.bottom, -130)
@@ -31,6 +31,7 @@ struct PlaceDetailView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Text(place.label).font(.system(.title))
+                            FavoriteButton(isSet: $modelData.places[placeIndex].isFavorite)
                             
                             Spacer()
                             
@@ -90,7 +91,7 @@ struct PlaceDetailView: View {
                 }.padding()
 
             }
-        }
+        }.ignoresSafeArea(edges: .top)
     }
 }
     
