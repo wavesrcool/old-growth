@@ -84,6 +84,6 @@ struct PlaceDetail: View {
 
 struct ObserveDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail(place: places[0])
+        PlaceDetail(place: ModelData().places[0])
     }
 }

@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct ObserveListView: View {
+    @EnvironmentObject var modelData: ModelData
+    @State private var showFavorites = false
+    
+    var filteredPlaces: [Place]{
+        modelData.places.filter { place in
+            (!showFavorites || place.isFavorite)
+        }
+    }
     var body: some View {
         NavigationView {
-                List(places) { place in
-                    NavigationLink {
-                    ObserveDetailView(place: place)
-                } label: {
-                    PlaceRow(place:place)
+            List {
+                Toggle(isOn: $showFavorites) {
+                    Text("Favorites only")
                 }
-            }.navigationTitle("Places")
+                ForEach(filteredPlaces) { place in
+                    NavigationLink {
+                        ObserveDetailView(place: place)
+                    } label: {
+                        PlaceRow(place:place)
+                    }
+                }.navigationTitle("Places")
+            }
         }
     }
 }
 
 struct ObserveListView_Previews: PreviewProvider {
     static var previews: some View {
-        ObserveListView()
+        ObserveListView().environmentObject(ModelData())
     }
 }

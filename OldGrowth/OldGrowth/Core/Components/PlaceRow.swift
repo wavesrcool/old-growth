@@ -14,12 +14,19 @@ struct PlaceRow: View {
         HStack {
             place.img.resizable().frame(width:50, height: 50)
             Text(place.label)
+            
             Spacer()
+            
+            if place.isFavorite {
+                Image(systemName: "star.fill").foregroundColor(.yellow)
+            }
         }
     }
 }
 
 struct ObservePlaceRowView_Previews: PreviewProvider {
+    static var places = ModelData().places
+    
     static var previews: some View {
         Group {
             PlaceRow(place: places[0])

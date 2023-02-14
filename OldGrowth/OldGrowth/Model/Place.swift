@@ -16,6 +16,7 @@ struct Place: Hashable, Codable, Identifiable {
     var regional: String
     var country: String
     var description: String
+    var isFavorite: Bool
     
     private var imgName: String
     var img: Image {
