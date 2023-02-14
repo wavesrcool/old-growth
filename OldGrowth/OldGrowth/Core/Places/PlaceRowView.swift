@@ -1,5 +1,5 @@
 //
-//  PlaceRow.swift
+//  PlaceRowView.swift
 //  OldGrowth
 //
 //  Created by Tyson Lupul on 2023-02-12.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaceRow: View {
+struct PlaceRowView: View {
     var place: Place
 
     var body: some View {
@@ -18,19 +18,20 @@ struct PlaceRow: View {
             Spacer()
             
             if place.isFavorite {
-                Image(systemName: "star.fill").foregroundColor(.yellow)
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
             }
         }
     }
 }
 
-struct ObservePlaceRowView_Previews: PreviewProvider {
+struct PlaceRowView_Previews: PreviewProvider {
     static var places = ModelData().places
     
     static var previews: some View {
         Group {
-            PlaceRow(place: places[0])
-            PlaceRow(place: places[1])
+            PlaceRowView(place: places[0])
+            PlaceRowView(place: places[1])
         }.previewLayout(.fixed(width:300,height:70))
     }
 }

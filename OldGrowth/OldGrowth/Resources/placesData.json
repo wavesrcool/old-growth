@@ -1,6 +1,8 @@
 [
     {
         "id": 1000,
+        "author": "coolnaturalist",
+        "datePosted": "2023-01-29",
         "label": "Hot Springs Cove",
         "type": "Hot Springs",
         "local": "Tofino",
@@ -17,6 +19,8 @@
     },
     {
         "id": 1001,
+        "author": "openvistas",
+        "datePosted": "2023-02-03",
         "label": "Liard River Hot Springs",
         "type": "Hot Springs",
         "local": "Liard River",
@@ -32,3 +36,4 @@
         "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae."
     }
 ]
+

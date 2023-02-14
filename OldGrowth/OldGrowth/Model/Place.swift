@@ -11,6 +11,8 @@ import CoreLocation
 
 struct Place: Hashable, Codable, Identifiable {
     var id: Int
+    var author: String
+    var datePosted: String
     var label: String
     var local: String
     var regional: String

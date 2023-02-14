@@ -1,5 +1,5 @@
 //
-//  ObserveListView.swift
+//  PlaceListView.swift
 //  OldGrowth
 //
 //  Created by Tyson Lupul on 2023-02-14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ObserveListView: View {
+struct PlaceListView: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavorites = false
     
@@ -24,9 +24,9 @@ struct ObserveListView: View {
                 }
                 ForEach(filteredPlaces) { place in
                     NavigationLink {
-                        ObserveDetailView(place: place)
+                        PlaceDetailView(place: place)
                     } label: {
-                        PlaceRow(place:place)
+                        PlaceRowView(place:place)
                     }
                 }.navigationTitle("Places")
             }
@@ -34,8 +34,8 @@ struct ObserveListView: View {
     }
 }
 
-struct ObserveListView_Previews: PreviewProvider {
+struct PlaceListView_Previews: PreviewProvider {
     static var previews: some View {
-        ObserveListView().environmentObject(ModelData())
+        PlaceListView().environmentObject(ModelData())
     }
 }

@@ -24,7 +24,7 @@ struct MapBasisView: View {
     }
 }
 
-struct MapOpenView_Previews: PreviewProvider {
+struct MapBasisView_Previews: PreviewProvider {
     static var previews: some View {
         MapBasisView(anchor: CLLocationCoordinate2D(
             latitude: 49.369866, longitude: -126.272242))
