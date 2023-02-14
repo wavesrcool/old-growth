@@ -1,28 +1,24 @@
 //
-//  ObservePlaceRowView.swift
+//  PlaceDetail.swift
 //  OldGrowth
 //
-//  Created by Tyson Lupul on 2023-02-12.
+//  Created by Tyson Lupul on 2023-02-14.
 //
 
 import SwiftUI
 
-struct ObservePlaceRowView: View {
-    @State var placeLabel = "Hot Springs Cove"
-    @State var placeLocal = "Tofino"
-    @State var placeRegional = "British Columbia"
-    @State var placeCountry = "Canada"
-    @State var placeAbout = "A truly transformational place to encounter. Hot Springs Cove is where the turbulence of the ocean and the tranquility of warm spring waters combine to create a unique environment of refuge amidst overpowering natural chaos."
-
+struct PlaceDetail: View {
+    var place: Place
     @State var placeAuthor = "coolnaturalist"
     @State var placeAuthorPostedOn = "10d"
-
+    
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(placeLabel).font(.system(.title))
+                        Text(place.label).font(.system(.title))
                         
                         Spacer()
                         
@@ -32,9 +28,9 @@ struct ObservePlaceRowView: View {
                     }
                     
                     HStack {
-                        Text(placeLocal).font(.subheadline)
+                        Text(place.local).font(.subheadline)
                         Text("&bull;").font(.subheadline).bold().foregroundColor(.gray)
-                        Text("\(placeRegional), \(placeCountry)").font(.subheadline)
+                        Text("\(place.regional), \(place.country)").font(.subheadline)
                         Spacer()
 
                     }
@@ -76,17 +72,18 @@ struct ObservePlaceRowView: View {
             Divider()
             
             VStack(alignment: .leading, spacing:12) {
-                Text("About \(placeLabel)").font(.title2)
-                Text("\(placeAbout)").font(.body)
+                Text("About \(place.label)").font(.title2)
+                Text("\(place.description)").font(.body)
 
             }.padding()
 
         }
     }
+    
 }
 
-struct ObservePlaceRowView_Previews: PreviewProvider {
+struct ObserveDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ObservePlaceRowView()
+        PlaceDetail(place: places[0])
     }
 }

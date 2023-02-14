@@ -10,10 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            MapOpenView().frame(height: 300)
-            CircleImageView().offset(y: -130).padding(.bottom, -130)
-            ObservePlaceRowView()
-            Spacer()
+            ObserveListView()
         }
     }
 }

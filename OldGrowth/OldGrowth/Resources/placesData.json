@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1000,
+        "label": "Hot Springs Cove",
+        "type": "Hot Springs",
+        "local": "Tofino",
+        "regional": "British Columbia",
+        "country": "Canada",
+        "isFeatured": true,
+        "isFavorite": true,
+        "anchor": {
+            "lat": 49.369866,
+            "lng": -126.272242
+        },
+        "imgName": "hot-springs-cove",
+        "description": "A truly transformational place to encounter. Hot Springs Cove is where the turbulence of the ocean and the tranquility of warm spring waters combine to create a unique environment of refuge amidst overpowering natural chaos."
+    },
+    {
+        "id": 1001,
+        "label": "Liard River Hot Springs",
+        "type": "Hot Springs",
+        "local": "Liard River",
+        "regional": "British Columbia",
+        "country": "Canada",
+        "isFeatured": false,
+        "isFavorite": false,
+        "anchor": {
+            "lat": 59.425226,
+            "lng": -126.102759
+        },
+        "imgName": "liard-river-hot-springs",
+        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae."
+    }
+]
